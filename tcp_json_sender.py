@@ -44,6 +44,7 @@ def main():
             print("Client connected from", addr)
             for v in values:
                 conn.sendall(struct.pack("d", v))
+                conn.sendall(struct.pack("d", v))
                 if interval:
                     time.sleep(interval)
             print("All values sent – closing connection.")
